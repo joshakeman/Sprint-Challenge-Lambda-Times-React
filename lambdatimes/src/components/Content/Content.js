@@ -12,7 +12,8 @@ export default class Content extends Component {
     this.state = {
       selected: 'all',
       tabs: [],
-      cards: []
+      cards: [],
+      filteredCards: []
     };
   }
 
@@ -59,7 +60,10 @@ export default class Content extends Component {
               selected={this.state.selected}
               changeSelected={this.changeSelected}
         />
-        <Cards cards={this.filterCards()} />
+        <Cards 
+        cards={this.filterCards()}
+        // cards={this.state.cards} 
+        />
       </div>
     );
   }
